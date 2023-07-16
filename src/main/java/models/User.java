@@ -35,10 +35,7 @@ public class User {
         this.password = password;
     }
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(  name = "current_applications",
-    joinColumns = @JoinColumn( name= "id"),
-    inverseJoinColumns = @JoinColumn(name = "user_current_applications"))
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private Set<Current_Applications> currentApplications = new HashSet<>();
 
     public Set<Current_Applications> getCurrentApplications() {
@@ -57,11 +54,21 @@ public class User {
         this.archivedApplications = archivedApplications;
     }
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "archived_applications",
-    joinColumns = @JoinColumn(name = "id"),
-    inverseJoinColumns = @JoinColumn(name = "user_archived_applications"))
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private Set<Archived_Applications> archivedApplications = new HashSet<>();
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(  name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();
 
     @NotBlank
     @Email
