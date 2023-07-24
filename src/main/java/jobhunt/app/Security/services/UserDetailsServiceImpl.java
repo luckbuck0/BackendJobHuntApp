@@ -1,6 +1,6 @@
-package Security.services;
+package jobhunt.app.Security.services;
 
-import models.User;
+import jobhunt.app.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
-import repository.UserRepository;
+import jobhunt.app.repository.UserRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

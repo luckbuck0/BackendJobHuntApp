@@ -1,6 +1,6 @@
-package repository;
+package jobhunt.app.repository;
 
-import models.User;
+import jobhunt.app.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
