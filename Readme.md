@@ -7,7 +7,7 @@ and monitor your job applications in one place, making it easier than ever to la
 
 ## Features
 -Create and manage job applications, including job title, company, application status, and application date.
--Keep track of upcoming interviews, including date, time, and interview location.
+-Keep track of upcoming interviews, including date, time, and interview locations.
 -Set reminders for important deadlines and follow-ups to stay on top of your job search.
 -Categorize and filter job applications by status, industry, or location to simplify your job hunting process.
 -Visualize your progress with charts and analytics to assess your job search performance.
