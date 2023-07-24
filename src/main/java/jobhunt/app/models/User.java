@@ -25,12 +25,6 @@ public class User {
     @GeneratedValue
     private Long id;
 
-    @OneToMany(mappedBy = "user_id", fetch = FetchType.LAZY)
-    private Set<Current_Applications> currentApplications = new HashSet<>();
-
-    @OneToMany(mappedBy = "user_id", fetch = FetchType.LAZY)
-    private Set<Archived_Applications> archivedApplications = new HashSet<>();
-
     @Enumerated(EnumType.STRING)
     private Role role;
 
@@ -48,7 +42,3 @@ public class User {
 }
 
 
-//    @ManyToMany(fetch = FetchType.LAZY)
-//    @JoinTable(  name = "user_roles",
-//            joinColumns = @JoinColumn(name = "user_id"),
-//            inverseJoinColumns = @JoinColumn(name = "role_id"))
